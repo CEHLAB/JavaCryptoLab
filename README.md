@@ -64,17 +64,19 @@ mvn spring-boot:run
 - AES Encrypt : `POST /api/crypto/aes/encrypt`
 - AES Decrypt : `POST /api/crypto/aes/decrypt`
 
-### GraphQL API
-Accédez à l'interface GraphiQL :
+### API GraphQL
+
+Endpoint GraphQL :
 
 ```
 http://localhost:8080/graphql
 ```
 
-Exemple de mutation GraphQL :
+Exemple de requête GraphQL :
+
 ```graphql
 mutation {
-  aesEncrypt(input: { data: "Texte secret", secretKey: "1234567812345678" })
+  aesEncrypt(input: { data: "Texte confidentiel", secretKey: "1234567812345678" })
 }
 ```
 
