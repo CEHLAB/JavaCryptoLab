@@ -1,0 +1,24 @@
+type Query {
+  rsaVerify(input: VerifyInput!): Boolean!
+}
+
+type Mutation {
+  rsaSign(input: SignInput!): String!
+  aesEncrypt(input: AesInput!): String!
+  aesDecrypt(input: AesInput!): String!
+}
+
+input SignInput {
+  data: String!
+  privateKeyBase64: String!
+}
+
+input VerifyInput {
+  signedData: String!
+  publicKeyBase64: String!
+}
+
+input AesInput {
+  data: String!
+  secretKey: String!
+}
